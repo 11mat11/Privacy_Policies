@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | TestownikGO</title>
+  <style>
+    :root {
+      --primary: #7C3AED;
+      --primary-dark: #6D28D9;
+      --accent: #EC4899;
+      --bg: #FDF4FF;
+      --card-bg: #FFFFFF;
+      --text: #1E1B4B;
+      --text-muted: #4B5563;
+      --border: #E9D5FF;
+      --tag-bg: #EDE9FE;
+      --tag-text: #6D28D9;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary: #C084FC;
+        --primary-dark: #A855F7;
+        --accent: #F472B6;
+        --bg: #1E1B2E;
+        --card-bg: #2D2A3F;
+        --text: #F9FAFB;
+        --text-muted: #D1D5DB;
+        --border: #4C1D95;
+        --tag-bg: #3B1B54;
+        --tag-text: #E9D5FF;
+      }
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      padding: 30px 16px;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      width: 100%;
+      max-width: 800px;
+    }
+    .nav-bar {
+      margin-bottom: 24px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover {
+      color: var(--accent);
+    }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 36px 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      margin-bottom: 30px;
+    }
+    .header-section {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 28px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 9999px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1.25;
+      margin-bottom: 8px;
+    }
+    .meta-info {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      background: var(--bg);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 28px;
+      border: 1px solid var(--border);
+    }
+    .info-item {
+      font-size: 0.9rem;
+    }
+    .info-item strong {
+      display: block;
+      color: var(--primary);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 2px;
+    }
+    .lang-tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .tab-button {
+      padding: 8px 18px;
+      border-radius: 9999px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .tab-button.active {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+    .lang-section {
+      display: none;
+    }
+    .lang-section.active {
+      display: block;
+    }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-top: 28px;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    p, ul {
+      color: var(--text);
+      margin-bottom: 16px;
+      font-size: 1rem;
+    }
+    ul {
+      padding-left: 22px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    li strong {
+      color: var(--accent);
+    }
+    .highlight-box {
+      background: var(--tag-bg);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav-bar">
+      <a href="../" class="back-link">&larr; All Privacy Policies</a>
+    </div>
+
+    <div class="card">
+      <div class="header-section">
+        <span class="badge">Official Policy</span>
+        <h1>Privacy Policy for TestownikGO</h1>
+        <p class="meta-info">Last Updated: September 15, 2026</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <strong>Application Name</strong>
+          <span>TestownikGO</span>
+        </div>
+        <div class="info-item">
+          <strong>Package ID</strong>
+          <span>com.s11mat11.TestownikGO</span>
+        </div>
+        <div class="info-item">
+          <strong>Developer</strong>
+          <span>11mat11</span>
+        </div>
+        <div class="info-item">
+          <strong>Contact</strong>
+          <span>S11mat11@outlook.com</span>
+        </div>
+      </div>
+
+      <div class="lang-tabs">
+        <button class="tab-button active" onclick="switchLang('en')">English</button>
+        <button class="tab-button" onclick="switchLang('pl')">Polski (PL)</button>
+      </div>
+
+      <!-- ENGLISH VERSION -->
+      <div id="lang-en" class="lang-section active">
+        <div class="highlight-box">
+          <strong>Summary:</strong> TestownikGO is a 100% offline educational tool. It does not collect, track, or share any personal information. Internet access is completely disabled.
+        </div>
+
+        <h2>1. Developer and Application Identification</h2>
+        <p>This Privacy Policy governs the mobile application <strong>TestownikGO</strong> (Application ID: <code>com.s11mat11.TestownikGO</code>), published and maintained by <strong>11mat11</strong> ("Developer").</p>
+
+        <h2>2. Zero Data Collection and Transmission</h2>
+        <ul>
+          <li><strong>No Personal Data:</strong> The Application does not collect, process, record, share, or sell any personal data, usage analytics, or device identifiers.</li>
+          <li><strong>No Internet Connection:</strong> Internet access is explicitly blocked within the Application (<code>android.permission.INTERNET</code> is removed). The Application cannot establish network connections or transmit data to any external server.</li>
+          <li><strong>No Third-Party SDKs:</strong> The Application contains no third-party tracking, advertising, or cloud services (such as Firebase, Google Analytics, or AdMob).</li>
+        </ul>
+
+        <h2>3. Local Storage and File Access</h2>
+        <ul>
+          <li><strong>Question Files (.txt, .zip):</strong> Test files are selected strictly by the user via the system document picker. These files are processed entirely in the local memory of the device and never leave the device.</li>
+          <li><strong>Quiz Progress &amp; Settings:</strong> User preferences and current quiz progress are stored locally on the device using local storage (<code>AsyncStorage</code>).</li>
+        </ul>
+
+        <h2>4. Data Retention and Deletion</h2>
+        <p>Because all data is stored exclusively on your device, you retain full control. You can permanently delete all stored data and settings at any time by clearing the Application's storage/cache in Android Settings or by uninstalling the Application.</p>
+
+        <h2>5. Children’s Privacy</h2>
+        <p>The Application does not collect any data from any user, including children under the age of 13 (or under 16 in the EEA), complying fully with COPPA and GDPR regulations.</p>
+
+        <h2>6. Contact Us</h2>
+        <p>For any questions or inquiries regarding this Privacy Policy or the Application, please reach out to:</p>
+        <p><strong>Email:</strong> <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a></p>
+      </div>
+
+      <!-- POLISH VERSION -->
+      <div id="lang-pl" class="lang-section">
+        <div class="highlight-box">
+          <strong>Podsumowanie:</strong> TestownikGO to w 100% lokalna aplikacja edukacyjna offline. Nie zbiera, nie śledzi ani nie udostępnia żadnych danych osobowych. Dostęp do Internetu jest zablokowany.
+        </div>
+
+        <h2>1. Dane identyfikacyjne aplikacji i dewelopera</h2>
+        <p>Niniejsza Polityka Prywatności dotyczy aplikacji mobilnej <strong>TestownikGO</strong> (identyfikator pakietu: <code>com.s11mat11.TestownikGO</code>), wydawanej i rozwijanej przez dewelopera <strong>11mat11</strong> („Deweloper”).</p>
+
+        <h2>2. Brak zbierania i przesyłania danych</h2>
+        <ul>
+          <li><strong>Brak danych osobowych:</strong> Aplikacja nie gromadzi, nie przetwarza, nie zapisuje ani nie udostępnia żadnych danych użytkownika ani identyfikatorów urządzenia.</li>
+          <li><strong>Brak połączenia z siecią:</strong> Uprawnienie dostępu do Internetu zostało całkowicie wyłączone (<code>android.permission.INTERNET</code> jest zablokowane). Aplikacja nie nawiązuje żadnych połączeń sieciowych.</li>
+          <li><strong>Brak zewnętrznych bibliotek (SDK):</strong> Aplikacja nie korzysta z żadnych zewnętrznych modułów śledzących, analitycznych ani reklamowych (brak Firebase, Google Analytics, reklam itp.).</li>
+        </ul>
+
+        <h2>3. Pamięć lokalna i dostęp do plików</h2>
+        <ul>
+          <li><strong>Pliki z testami (.txt, .zip):</strong> Pliki są wybierane wyłącznie przez użytkownika za pomocą systemowego selektora plików i przetwarzane wyłącznie lokalnie w pamięci urządzenia.</li>
+          <li><strong>Postępy i ustawienia:</strong> Postęp quizu oraz ustawienia zapisywane są tylko w pamięci podręcznej telefonu (<code>AsyncStorage</code>).</li>
+        </ul>
+
+        <h2>4. Usuwanie danych</h2>
+        <p>Wszystkie dane znajdują się wyłącznie na Twoim urządzeniu. W każdej chwili możesz je całkowicie usunąć, czyszcząc pamięć podręczną aplikacji w ustawieniach systemu Android lub odinstalowując aplikację.</p>
+
+        <h2>5. Ochrona prywatności dzieci</h2>
+        <p>Aplikacja nie zbiera żadnych danych osobowych od nikogo, w tym od dzieci, będąc w pełni zgodną z przepisami COPPA oraz RODO (GDPR).</p>
+
+        <h2>6. Kontakt</h2>
+        <p>W razie pytań lub uwag dotyczących Polityki Prywatności prosimy o kontakt:</p>
+        <p><strong>E-mail:</strong> <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a></p>
+      </div>
+
+    </div>
+
+    <footer>
+      &copy; 2026 11mat11 &bull; TestownikGO
+    </footer>
+  </div>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+      document.querySelectorAll('.lang-section').forEach(sec => sec.classList.remove('active'));
+
+      if (lang === 'en') {
+        document.querySelectorAll('.tab-button')[0].classList.add('active');
+        document.getElementById('lang-en').classList.add('active');
+      } else {
+        document.querySelectorAll('.tab-button')[1].classList.add('active');
+        document.getElementById('lang-pl').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>
