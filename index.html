@@ -3,28 +3,40 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policies | 11mat11</title>
+  <title>Legal & Privacy Portal | 11mat11</title>
   <style>
     :root {
-      --primary: #7C3AED;
-      --primary-hover: #6D28D9;
-      --accent: #EC4899;
-      --bg: #FDF4FF;
+      --bg: #F8FAFC;
       --card-bg: #FFFFFF;
-      --text: #1E1B4B;
-      --text-muted: #4B5563;
-      --border: #E9D5FF;
+      --card-border: #E2E8F0;
+      --card-hover-border: #94A3B8;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --brand: #0284C7;
+      --header-bg: #0F172A;
+      --header-text: #F8FAFC;
+      --header-sub: #94A3B8;
+      --badge-bg: #E0F2FE;
+      --badge-text: #0369A1;
+      --tag-bg: #F1F5F9;
+      --tag-text: #475569;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --primary: #C084FC;
-        --primary-hover: #A855F7;
-        --accent: #F472B6;
-        --bg: #1E1B2E;
-        --card-bg: #2D2A3F;
-        --text: #F9FAFB;
-        --text-muted: #D1D5DB;
-        --border: #4C1D95;
+        --bg: #0B0F19;
+        --card-bg: #111827;
+        --card-border: #1F2937;
+        --card-hover-border: #374151;
+        --text-main: #F9FAFB;
+        --text-muted: #9CA3AF;
+        --brand: #38BDF8;
+        --header-bg: #0B0F19;
+        --header-text: #F9FAFB;
+        --header-sub: #9CA3AF;
+        --badge-bg: #0C4A6E;
+        --badge-text: #BAE6FD;
+        --tag-bg: #1F2937;
+        --tag-text: #D1D5DB;
       }
     }
     * {
@@ -33,101 +45,160 @@
       padding: 0;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg);
-      color: var(--text);
+      color: var(--text-main);
       line-height: 1.6;
-      padding: 40px 20px;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
     }
-    .container {
-      width: 100%;
-      max-width: 720px;
-    }
-    header {
+    /* Top corporate banner */
+    .top-bar {
+      background-color: var(--header-bg);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 48px 24px 44px;
       text-align: center;
-      margin-bottom: 40px;
     }
-    .badge {
+    .top-bar-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .portal-badge {
       display: inline-block;
-      padding: 4px 14px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      border-radius: 9999px;
-      margin-bottom: 12px;
-      letter-spacing: 0.5px;
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 1.2px;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      background-color: rgba(56, 189, 248, 0.12);
+      color: #38BDF8;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+      margin-bottom: 16px;
     }
-    h1 {
-      font-size: 2.2rem;
+    .top-bar h1 {
+      font-size: 2.25rem;
       font-weight: 800;
-      margin-bottom: 8px;
-      background: linear-gradient(135deg, var(--primary), var(--accent));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--header-text);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
     }
-    p.subtitle {
-      color: var(--text-muted);
+    .top-bar p {
+      color: var(--header-sub);
       font-size: 1.05rem;
+      max-width: 640px;
+      margin: 0 auto;
     }
-    .card-list {
+    /* Main container */
+    .content-area {
+      flex: 1;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+    .section-header {
       display: flex;
-      flex-direction: column;
-      gap: 18px;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 12px;
+    }
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .registry-count {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    /* Cards list */
+    .app-grid {
+      display: grid;
+      gap: 16px;
     }
     .app-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      padding: 24px 28px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     }
     .app-card:hover {
+      border-color: var(--card-hover-border);
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(124, 58, 237, 0.15);
-      border-color: var(--primary);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     }
-    .app-info h2 {
-      font-size: 1.3rem;
+    .app-card-left {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .app-header-line {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .app-name {
+      font-size: 1.25rem;
       font-weight: 700;
-      color: var(--primary);
-      margin-bottom: 4px;
+      color: var(--text-main);
     }
-    .app-info p {
+    .status-pill {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .app-package {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.85rem;
       color: var(--text-muted);
+    }
+    .app-card-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--brand);
       font-size: 0.95rem;
+      font-weight: 600;
     }
-    .arrow-icon {
-      color: var(--accent);
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-left: 16px;
-      transition: transform 0.2s ease;
+    .arrow {
+      font-size: 1.2rem;
+      transition: transform 0.2s;
     }
-    .app-card:hover .arrow-icon {
+    .app-card:hover .arrow {
       transform: translateX(4px);
     }
+    /* Footer */
     footer {
-      margin-top: 50px;
+      border-top: 1px solid var(--card-border);
+      padding: 32px 24px;
       text-align: center;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.875rem;
+      background: var(--card-bg);
     }
     footer a {
-      color: var(--primary);
+      color: var(--brand);
       text-decoration: none;
-      font-weight: 600;
+      font-weight: 500;
     }
     footer a:hover {
       text-decoration: underline;
@@ -135,26 +206,42 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <span class="badge">Legal &amp; Privacy Center</span>
-      <h1>Developer Privacy Policies</h1>
-      <p class="subtitle">Official privacy documentation for applications published by <strong>11mat11</strong>.</p>
-    </header>
 
-    <main class="card-list">
+  <header class="top-bar">
+    <div class="top-bar-inner">
+      <span class="portal-badge">Official Registry</span>
+      <h1>Legal &amp; Privacy Documentation</h1>
+      <p>Public regulatory documentation, data safety declarations, and privacy policies for software published by <strong>11mat11</strong>.</p>
+    </div>
+  </header>
+
+  <main class="content-area">
+    <div class="section-header">
+      <span class="section-title">Applications Directory</span>
+      <span class="registry-count">1 Published Document</span>
+    </div>
+
+    <div class="app-grid">
       <a href="./testownikgo/" class="app-card">
-        <div class="app-info">
-          <h2>TestownikGO</h2>
-          <p>com.s11mat11.TestownikGO &bull; Offline Study Tool</p>
+        <div class="app-card-left">
+          <div class="app-header-line">
+            <span class="app-name">TestownikGO</span>
+            <span class="status-pill">Offline Utility</span>
+          </div>
+          <span class="app-package">com.s11mat11.TestownikGO</span>
         </div>
-        <div class="arrow-icon">&rarr;</div>
+        <div class="app-card-right">
+          <span>View Policy</span>
+          <span class="arrow">&rarr;</span>
+        </div>
       </a>
-    </main>
+    </div>
+  </main>
 
-    <footer>
-      <p>Need support or have questions? Contact: <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a></p>
-    </footer>
-  </div>
+  <footer>
+    <p>&copy; 2026 <strong>11mat11</strong>. All rights reserved.</p>
+    <p style="margin-top: 6px;">Developer Contact &amp; Legal Inquiries: <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a></p>
+  </footer>
+
 </body>
 </html>

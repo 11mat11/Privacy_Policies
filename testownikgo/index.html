@@ -37,17 +37,17 @@
       padding: 0;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
-      line-height: 1.65;
-      padding: 30px 16px;
+      line-height: 1.7;
+      padding: 36px 16px;
       display: flex;
       justify-content: center;
     }
     .container {
       width: 100%;
-      max-width: 800px;
+      max-width: 820px;
     }
     .nav-bar {
       margin-bottom: 24px;
@@ -69,9 +69,14 @@
       background: var(--card-bg);
       border: 1px solid var(--border);
       border-radius: 20px;
-      padding: 36px 32px;
+      padding: 44px 38px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
       margin-bottom: 30px;
+    }
+    @media (max-width: 600px) {
+      .card {
+        padding: 28px 20px;
+      }
     }
     .header-section {
       border-bottom: 2px solid var(--border);
@@ -83,52 +88,58 @@
       padding: 4px 12px;
       background: linear-gradient(135deg, var(--primary), var(--accent));
       color: #fff;
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 700;
       border-radius: 9999px;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.8px;
       text-transform: uppercase;
       margin-bottom: 12px;
     }
     h1 {
-      font-size: 2.1rem;
+      font-size: 2.15rem;
       font-weight: 800;
       color: var(--primary);
       line-height: 1.25;
       margin-bottom: 8px;
+      letter-spacing: -0.01em;
     }
     .meta-info {
       color: var(--text-muted);
       font-size: 0.9rem;
     }
-    .info-grid {
+    /* Compliance Identification Box */
+    .compliance-box {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 12px;
       background: var(--bg);
       border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 28px;
+      padding: 18px 20px;
+      margin-bottom: 30px;
       border: 1px solid var(--border);
     }
-    .info-item {
-      font-size: 0.9rem;
-    }
-    .info-item strong {
+    .compliance-item strong {
       display: block;
       color: var(--primary);
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 2px;
+      letter-spacing: 0.8px;
+      margin-bottom: 3px;
     }
+    .compliance-item span {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+    /* Language Toggle Tabs */
     .lang-tabs {
       display: flex;
       gap: 10px;
-      margin-bottom: 24px;
+      margin-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 16px;
     }
     .tab-button {
-      padding: 8px 18px;
+      padding: 8px 20px;
       border-radius: 9999px;
       border: 1px solid var(--border);
       background: transparent;
@@ -140,7 +151,7 @@
     }
     .tab-button.active {
       background: var(--primary);
-      color: #fff;
+      color: #ffffff;
       border-color: var(--primary);
     }
     .lang-section {
@@ -149,38 +160,44 @@
     .lang-section.active {
       display: block;
     }
+    /* Legal Typography */
     h2 {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--primary);
-      margin-top: 28px;
+      margin-top: 32px;
       margin-bottom: 12px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      letter-spacing: -0.01em;
     }
-    p, ul {
+    h2:first-of-type {
+      margin-top: 10px;
+    }
+    p {
       color: var(--text);
       margin-bottom: 16px;
-      font-size: 1rem;
+      font-size: 0.98rem;
     }
     ul {
-      padding-left: 22px;
+      padding-left: 24px;
+      margin-bottom: 16px;
     }
     li {
       margin-bottom: 8px;
+      font-size: 0.98rem;
     }
     li strong {
-      color: var(--accent);
+      color: var(--primary);
     }
-    .highlight-box {
+    .executive-summary {
       background: var(--tag-bg);
       border-left: 4px solid var(--accent);
-      padding: 14px 18px;
-      border-radius: 0 10px 10px 0;
-      margin: 18px 0;
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 28px;
       font-size: 0.95rem;
-      color: var(--text);
+    }
+    .executive-summary strong {
+      color: var(--accent);
     }
     a {
       color: var(--primary);
@@ -194,117 +211,158 @@
       text-align: center;
       color: var(--text-muted);
       font-size: 0.85rem;
-      padding-bottom: 20px;
+      padding: 20px 0 30px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="nav-bar">
-      <a href="../" class="back-link">&larr; All Privacy Policies</a>
+      <a href="../" class="back-link">&larr; Return to Applications Directory</a>
     </div>
 
     <div class="card">
       <div class="header-section">
-        <span class="badge">Official Policy</span>
+        <span class="badge">Regulatory Disclosure</span>
         <h1>Privacy Policy for TestownikGO</h1>
-        <p class="meta-info">Last Updated: September 15, 2026</p>
+        <p class="meta-info">Effective Date: September 15, 2026 &bull; Last Revised: September 16, 2026</p>
       </div>
 
-      <div class="info-grid">
-        <div class="info-item">
+      <!-- Verified Identifier Registry for Google Play Validation -->
+      <div class="compliance-box">
+        <div class="compliance-item">
           <strong>Application Name</strong>
           <span>TestownikGO</span>
         </div>
-        <div class="info-item">
-          <strong>Package ID</strong>
+        <div class="compliance-item">
+          <strong>Application Package ID</strong>
           <span>com.s11mat11.TestownikGO</span>
         </div>
-        <div class="info-item">
-          <strong>Developer</strong>
+        <div class="compliance-item">
+          <strong>Publisher &amp; Developer</strong>
           <span>11mat11</span>
         </div>
-        <div class="info-item">
-          <strong>Contact</strong>
+        <div class="compliance-item">
+          <strong>Legal &amp; Privacy Contact</strong>
           <span>S11mat11@outlook.com</span>
         </div>
       </div>
 
       <div class="lang-tabs">
-        <button class="tab-button active" onclick="switchLang('en')">English</button>
+        <button class="tab-button active" onclick="switchLang('en')">English (Primary)</button>
         <button class="tab-button" onclick="switchLang('pl')">Polski (PL)</button>
       </div>
 
-      <!-- ENGLISH VERSION -->
+      <!-- ================= ENGLISH LEGAL TEXT ================= -->
       <div id="lang-en" class="lang-section active">
-        <div class="highlight-box">
-          <strong>Summary:</strong> TestownikGO is a 100% offline educational tool. It does not collect, track, or share any personal information. Internet access is completely disabled.
+        <div class="executive-summary">
+          <strong>Policy Summary:</strong> TestownikGO operates strictly as an offline educational tool. The Application does not collect, process, transmit, or monetize any personal data. All operations execute entirely within the local runtime environment of your device, and no network connectivity is established.
         </div>
 
-        <h2>1. Developer and Application Identification</h2>
-        <p>This Privacy Policy governs the mobile application <strong>TestownikGO</strong> (Application ID: <code>com.s11mat11.TestownikGO</code>), published and maintained by <strong>11mat11</strong> ("Developer").</p>
+        <h2>1. Scope and Entity Identification</h2>
+        <p>This Privacy Policy constitutes a formal legal statement governing the data handling practices of the mobile application <strong>TestownikGO</strong> (Package ID: <code>com.s11mat11.TestownikGO</code>, hereinafter referred to as the "Application"), created, published, and maintained by <strong>11mat11</strong> (hereinafter referred to as the "Developer", "we", "us", or "our"). This policy outlines our commitment to user confidentiality and regulatory compliance across global distribution channels, including the Google Play Store.</p>
 
-        <h2>2. Zero Data Collection and Transmission</h2>
+        <h2>2. Data Collection and Processing Principle</h2>
+        <p>The Application is architected under the principle of <em>strict data minimization</em> and total offline functionality:</p>
         <ul>
-          <li><strong>No Personal Data:</strong> The Application does not collect, process, record, share, or sell any personal data, usage analytics, or device identifiers.</li>
-          <li><strong>No Internet Connection:</strong> Internet access is explicitly blocked within the Application (<code>android.permission.INTERNET</code> is removed). The Application cannot establish network connections or transmit data to any external server.</li>
-          <li><strong>No Third-Party SDKs:</strong> The Application contains no third-party tracking, advertising, or cloud services (such as Firebase, Google Analytics, or AdMob).</li>
+          <li><strong>No Personal Information:</strong> We do not collect, capture, store, or transmit personally identifiable information (PII), such as legal names, residential or electronic mail addresses, phone numbers, precise or coarse geolocation data, or hardware serial identifiers.</li>
+          <li><strong>No Network Connectivity:</strong> The Application operates entirely offline and does not establish connections to external servers, cloud databases, or remote endpoints. No inbound or outbound network transmission occurs during the usage of the Application.</li>
+          <li><strong>Zero Remote Telemetry &amp; Advertising:</strong> The Application does not integrate any third-party Software Development Kits (SDKs) for the purpose of tracking, user profiling, advertising, telemetry, or remote crash reporting (such as Google Firebase, Google Analytics, or AdMob).</li>
         </ul>
 
-        <h2>3. Local Storage and File Access</h2>
+        <h2>3. Local Device Storage and File Handling</h2>
+        <p>Any data processed by the Application remains strictly confined to the local storage environment of the user's physical device:</p>
         <ul>
-          <li><strong>Question Files (.txt, .zip):</strong> Test files are selected strictly by the user via the system document picker. These files are processed entirely in the local memory of the device and never leave the device.</li>
-          <li><strong>Quiz Progress &amp; Settings:</strong> User preferences and current quiz progress are stored locally on the device using local storage (<code>AsyncStorage</code>).</li>
+          <li><strong>User-Selected Files:</strong> Question archives (such as <code>.txt</code> and <code>.zip</code> files) are accessed solely upon explicit user action via the native system file selector. These files are parsed in local volatile memory and remain strictly on the host device.</li>
+          <li><strong>Local Session State &amp; Preferences:</strong> Quiz progress, repetition counts, and configurable settings are stored exclusively in the host device's sandboxed local application storage. This data is never synchronized with any remote system.</li>
         </ul>
 
-        <h2>4. Data Retention and Deletion</h2>
-        <p>Because all data is stored exclusively on your device, you retain full control. You can permanently delete all stored data and settings at any time by clearing the Application's storage/cache in Android Settings or by uninstalling the Application.</p>
+        <h2>4. Data Retention, Control, and Deletion</h2>
+        <p>Because the Developer maintains no central infrastructure or remote databases, all stored data is entirely under the user's direct custody:</p>
+        <ul>
+          <li>Users may permanently purge all stored preferences, test states, and cached files at any time by clearing the Application's storage via the device's operating system settings.</li>
+          <li>Uninstalling the Application completely and permanently removes all associated application data and cached files from the device.</li>
+        </ul>
 
-        <h2>5. Children’s Privacy</h2>
-        <p>The Application does not collect any data from any user, including children under the age of 13 (or under 16 in the EEA), complying fully with COPPA and GDPR regulations.</p>
+        <h2>5. Global Privacy Regulations (GDPR &amp; International Standards)</h2>
+        <p>In accordance with Regulation (EU) 2016/679 (General Data Protection Regulation / GDPR) and comparable international privacy statutes:</p>
+        <ul>
+          <li>Because no personal data is collected, processed, or transferred, the Developer does not act as a Data Controller or Data Processor within the meaning of the GDPR.</li>
+          <li>No automated decision-making, behavioral profiling, or cross-platform tracking is performed.</li>
+        </ul>
 
-        <h2>6. Contact Us</h2>
-        <p>For any questions or inquiries regarding this Privacy Policy or the Application, please reach out to:</p>
-        <p><strong>Email:</strong> <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a></p>
+        <h2>6. Protection of Children’s Privacy</h2>
+        <p>The Application complies fully with the Children's Online Privacy Protection Act (COPPA) and European Union age-appropriate design codes. Because no personal data is gathered from any individual, the Application does not knowingly collect, solicit, or maintain personal information from children under the age of 13 (or under 16 within the European Economic Area).</p>
+
+        <h2>7. Amendments to This Privacy Policy</h2>
+        <p>We reserve the right to revise or amend this Privacy Policy periodically to reflect technological updates or evolving legal standards. Any modifications will be posted directly to this public document with a revised "Effective Date". Continued use of the Application signifies acceptance of any updated terms.</p>
+
+        <h2>8. Contact &amp; Governance</h2>
+        <p>For legal inquiries, verification requests, or questions concerning this Privacy Policy, please contact the Developer directly:</p>
+        <p>
+          <strong>Publisher:</strong> 11mat11<br />
+          <strong>Application:</strong> TestownikGO (<code>com.s11mat11.TestownikGO</code>)<br />
+          <strong>Contact Inquiries:</strong> <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a>
+        </p>
       </div>
 
-      <!-- POLISH VERSION -->
+      <!-- ================= POLISH LEGAL TEXT ================= -->
       <div id="lang-pl" class="lang-section">
-        <div class="highlight-box">
-          <strong>Podsumowanie:</strong> TestownikGO to w 100% lokalna aplikacja edukacyjna offline. Nie zbiera, nie śledzi ani nie udostępnia żadnych danych osobowych. Dostęp do Internetu jest zablokowany.
+        <div class="executive-summary">
+          <strong>Podsumowanie zasad prywatności:</strong> Aplikacja TestownikGO funkcjonuje wyłącznie jako lokalne narzędzie edukacyjne w trybie offline. Aplikacja nie zbiera, nie przetwarza, nie przesyła ani nie odsprzedaje danych osobowych. Wszelkie operacje wykonywane są lokalnie na urządzeniu użytkownika bez użycia łączności sieciowej.
         </div>
 
-        <h2>1. Dane identyfikacyjne aplikacji i dewelopera</h2>
-        <p>Niniejsza Polityka Prywatności dotyczy aplikacji mobilnej <strong>TestownikGO</strong> (identyfikator pakietu: <code>com.s11mat11.TestownikGO</code>), wydawanej i rozwijanej przez dewelopera <strong>11mat11</strong> („Deweloper”).</p>
+        <h2>1. Zakres i identyfikacja podmiotu</h2>
+        <p>Niniejsza Polityka Prywatności stanowi formalny dokument regulujący zasady ochrony prywatności w aplikacji mobilnej <strong>TestownikGO</strong> (identyfikator pakietu: <code>com.s11mat11.TestownikGO</code>, zwanej dalej „Aplikacją”), wydawanej, publikowanej i utrzymywanej przez dewelopera <strong>11mat11</strong> (zwanego dalej „Deweloperem”). Dokument ten określa standardy poufności danych i zgodności z wymogami prawnymi w ramach dystrybucji za pośrednictwem sklepu Google Play.</p>
 
-        <h2>2. Brak zbierania i przesyłania danych</h2>
+        <h2>2. Zasada minimalizacji i brak przetwarzania danych</h2>
+        <p>Architektura Aplikacji opiera się na zasadzie <em>bezwzględnej minimalizacji danych</em> oraz pełnego działania offline:</p>
         <ul>
-          <li><strong>Brak danych osobowych:</strong> Aplikacja nie gromadzi, nie przetwarza, nie zapisuje ani nie udostępnia żadnych danych użytkownika ani identyfikatorów urządzenia.</li>
-          <li><strong>Brak połączenia z siecią:</strong> Uprawnienie dostępu do Internetu zostało całkowicie wyłączone (<code>android.permission.INTERNET</code> jest zablokowane). Aplikacja nie nawiązuje żadnych połączeń sieciowych.</li>
-          <li><strong>Brak zewnętrznych bibliotek (SDK):</strong> Aplikacja nie korzysta z żadnych zewnętrznych modułów śledzących, analitycznych ani reklamowych (brak Firebase, Google Analytics, reklam itp.).</li>
+          <li><strong>Brak danych osobowych:</strong> Aplikacja nie gromadzi, nie rejestruje, nie przechowuje ani nie przesyła jakichkolwiek danych umożliwiających identyfikację tożsamości (danych osobowych), takich jak imię, nazwisko, adres e-mail, numer telefonu, geolokalizacja czy numery seryjne urządzenia.</li>
+          <li><strong>Brak łączności sieciowej:</strong> Aplikacja funkcjonuje w całości w trybie offline i nie nawiązuje żadnych połączeń z zewnętrznymi serwerami, bazami danych ani usługami chmurowymi.</li>
+          <li><strong>Brak zewnętrznych bibliotek analitycznych i reklamowych:</strong> Aplikacja nie zawiera żadnych zewnętrznych pakietów SDK służących do śledzenia użytkowników, profilowania behawioralnego, wyświetlania reklam ani zdalnego raportowania błędów (np. Google Firebase, Google Analytics, AdMob).</li>
         </ul>
 
-        <h2>3. Pamięć lokalna i dostęp do plików</h2>
+        <h2>3. Pamięć urządzenia i obsługa plików</h2>
+        <p>Wszelkie dane przetwarzane przez Aplikację pozostają ściśle odizolowane w lokalnej przestrzeni urządzenia użytkownika:</p>
         <ul>
-          <li><strong>Pliki z testami (.txt, .zip):</strong> Pliki są wybierane wyłącznie przez użytkownika za pomocą systemowego selektora plików i przetwarzane wyłącznie lokalnie w pamięci urządzenia.</li>
-          <li><strong>Postępy i ustawienia:</strong> Postęp quizu oraz ustawienia zapisywane są tylko w pamięci podręcznej telefonu (<code>AsyncStorage</code>).</li>
+          <li><strong>Pliki wybrane przez użytkownika:</strong> Zestawy pytań (pliki <code>.txt</code> oraz <code>.zip</code>) są otwierane wyłącznie na wyraźne żądanie użytkownika za pośrednictwem natywnego selektora plików systemu operacyjnego. Pliki te są przetwarzane wyłącznie w pamięci operacyjnej urządzenia i nigdy go nie opuszczają.</li>
+          <li><strong>Lokalny stan sesji i ustawienia:</strong> Postęp w rozwiązywaniu testów, liczniki powtórzeń oraz preferencje konfiguracyjne są zapisywane wyłącznie w lokalnej pamięci piaskownicy aplikacji (sandbox). Dane te nie są synchronizowane z żadnym systemem zewnętrznym.</li>
         </ul>
 
-        <h2>4. Usuwanie danych</h2>
-        <p>Wszystkie dane znajdują się wyłącznie na Twoim urządzeniu. W każdej chwili możesz je całkowicie usunąć, czyszcząc pamięć podręczną aplikacji w ustawieniach systemu Android lub odinstalowując aplikację.</p>
+        <h2>4. Kontrola użytkownika i usuwanie danych</h2>
+        <p>Z uwagi na brak centralnych serwerów oraz zdalnych baz danych, użytkownik sprawuje pełną i wyłączną kontrolę nad swoimi danymi:</p>
+        <ul>
+          <li>Użytkownik może w każdej chwili trwale usunąć wszelkie zapisane ustawienia, postępy i pamięć podręczną poprzez wyczyszczenie danych Aplikacji w ustawieniach systemu operacyjnego urządzenia.</li>
+          <li>Odinstalowanie Aplikacji skutkuje bezpowrotnym usunięciem wszelkich powiązanych z nią plików i konfiguracji z urządzenia.</li>
+        </ul>
 
-        <h2>5. Ochrona prywatności dzieci</h2>
-        <p>Aplikacja nie zbiera żadnych danych osobowych od nikogo, w tym od dzieci, będąc w pełni zgodną z przepisami COPPA oraz RODO (GDPR).</p>
+        <h2>5. Zgodność z RODO (GDPR) oraz normami międzynarodowymi</h2>
+        <p>Zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 (Ogólne rozporządzenie o ochronie danych / RODO):</p>
+        <ul>
+          <li>W związku z faktem, że Aplikacja nie zbiera ani nie przetwarza danych osobowych, Deweloper nie pełni roli Administratora Danych Osobowych ani Podmiotu Przetwarzającego w rozumieniu przepisów RODO.</li>
+          <li>W Aplikacji nie stosuje się zautomatyzowanego podejmowania decyzji, profilowania ani śledzenia pomiędzy różnymi platformami.</li>
+        </ul>
 
-        <h2>6. Kontakt</h2>
-        <p>W razie pytań lub uwag dotyczących Polityki Prywatności prosimy o kontakt:</p>
-        <p><strong>E-mail:</strong> <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a></p>
+        <h2>6. Prywatność dzieci</h2>
+        <p>Aplikacja spełnia wszelkie wymogi przepisów dotyczących ochrony prywatności dzieci (w tym COPPA oraz unijnych standardów ochrony małoletnich). Ze względu na całkowity brak gromadzenia jakichkolwiek informacji, Aplikacja nie zbiera ani nie przetwarza danych dzieci poniżej 13. roku życia (lub poniżej 16. roku życia na obszarze Europejskiego Obszaru Gospodarczego).</p>
+
+        <h2>7. Zmiany Polityki Prywatności</h2>
+        <p>Deweloper zastrzega sobie prawo do okresowej aktualizacji niniejszego dokumentu w celu dostosowania go do zmian technologicznych lub regulacji prawnych. Wszelkie modyfikacje będą publikowane w tym miejscu z zaktualizowaną datą wejścia w życie.</p>
+
+        <h2>8. Kontakt i informacje prawne</h2>
+        <p>W przypadku pytań lub wniosków dotyczących niniejszej Polityki Prywatności, prosimy o kontakt z Deweloperem:</p>
+        <p>
+          <strong>Wydawca:</strong> 11mat11<br />
+          <strong>Aplikacja:</strong> TestownikGO (<code>com.s11mat11.TestownikGO</code>)<br />
+          <strong>Kontakt e-mail:</strong> <a href="mailto:S11mat11@outlook.com">S11mat11@outlook.com</a>
+        </p>
       </div>
 
     </div>
 
     <footer>
-      &copy; 2026 11mat11 &bull; TestownikGO
+      &copy; 2026 <strong>11mat11</strong> &bull; TestownikGO Official Privacy Documentation
     </footer>
   </div>
 
